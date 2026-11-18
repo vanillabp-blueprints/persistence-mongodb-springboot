@@ -1,4 +1,4 @@
-package blueprint.workflowmodule;
+package blueprint.application;
 
 import org.springframework.boot.mongodb.autoconfigure.MongoClientSettingsBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
@@ -19,9 +19,10 @@ import com.mongodb.ConnectionString;
  * </p>
  *
  * <p>
- * The class is a plain {@code @Configuration} in the base package, so component scanning picks
- * it up for every test of this module without a test having to name it. That keeps the shared
- * harness classes untouched: they know nothing about MongoDB, and they do not have to.
+ * The class is a plain {@code @Configuration} in the package of the application, so the
+ * component scan of the application picks it up for every test of this module without a test
+ * having to name it. That keeps the shared harness classes untouched: they know nothing about
+ * MongoDB, and they do not have to.
  * </p>
  *
  * <p>
